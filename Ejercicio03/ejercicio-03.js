@@ -1,6 +1,10 @@
 function convertidor(grado) {
-  if (grado != undefined && typeof(grado) == "number"){
-    return ((9/5) * grado + 32);
+  var arrFinal = [];
+  if (grado != undefined && typeof(grado) == "object"){
+    for(var i = 0; i <grado.length; i++){
+      arrFinal.push(Math.round(grado[i] - 32 * (5/9)));
+    }
+    return arrFinal;
   }
   else {
     return "Error";
